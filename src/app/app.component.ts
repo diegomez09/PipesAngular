@@ -15,6 +15,7 @@ export class AppComponent {
   idioma:string='en';
   fecha:Date = new Date();
   nombre: string = 'Doroteo Arango';
+  nombreDos: string = 'BenITo CaMEla';
   arreglo = [1,2,3,4,5,6,7,8,9,10];
   PI: number = Math.PI;
   porcentaje:number = 0.3544;
