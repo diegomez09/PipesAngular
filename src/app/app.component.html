@@ -18,10 +18,104 @@
         </tr>
         <tr>
           <td>{{nombre}}</td>
-          <td>Uppercase</td>
+          <td>Lowercase</td>
           <td>{{ nombre | lowercase }}</td>
         </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>Slice:3</td>
+          <td>{{ nombre | slice:3 }}</td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>Slice:0:3</td>
+          <td>{{ nombre | slice:0:3 }}</td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>Slice:0:5</td>
+          <td>{{ arreglo | slice:1:5 }}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>number:'3.0-0'</td>
+          <td>{{ PI  | number:'3.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>number:'0.0-2'</td>
+          <td>{{ PI  | number:'0.0-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>percent</td>
+          <td>{{ porcentaje  | percent}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>percent:'2.2-3'</td>
+          <td>{{ porcentaje  | percent:'2.2-3'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency</td>
+          <td>{{ salario | currency}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency:'EUR':'symbol':'.0-0'</td>
+          <td>{{ salario | currency:'EUR':'symbol':'.0-0'}}</td>
+        </tr>  
+        <tr>
+          <td>{{promesa}}</td>
+          <td>async</td>
+          <td>{{ promesa | async}}</td>
+        </tr>  
+        <tr>
+          <td>{{fecha}}</td>
+          <td>Date</td>
+          <td>{{ fecha | date}}</td>
+        </tr>     
+        <tr>
+          <td>{{fecha}}</td>
+          <td>Date medium</td>
+          <td>{{ fecha | date:'medium'}}</td>
+        </tr>    
+        <tr>
+          <td>{{fecha}}</td>
+          <td>Date short</td>
+          <td>{{ fecha | date:'short'}}</td>
+        </tr>  
+        <tr>
+          <td>{{fecha}}</td>
+          <td>Date perso</td>
+          <td>{{ fecha | date:'MMMM-dd':'':idioma}}</td>
+        </tr> 
+        <tr>
+          <td>{{fecha}}</td>
+          <td>Date idioma
+            <br>
+            <button class="btn btn-primary" (click)="idioma = 'es'">ESPAÑOL</button>
+            <button class="btn btn-dark" (click)="idioma = 'en'">INGLES</button>
+            <button class="btn btn-warning" (click)="idioma = 'pt'">FRANCES</button>
+          </td>          
+          <td>{{ fecha | date:'MMMM-dd':'':idioma}}</td>
+        </tr> 
       </tbody>
     </table>
   </div>
-</div>
+  <div>
+    <h3>Slice</h3>
+    <hr>
+    <ul class="mb-5">
+      <li *ngFor="let item of arreglo | slice:5:20" class="list-gropu-item">{{item}}</li>
+    </ul>    
+    <h3 class="mt-3">JSON</h3>
+    <hr>    
+      <ul class="row">
+        <pre>
+        <li>{{heroe | json}}</li>
+        </pre>
+      </ul>      
+    </div>      
+  </div>
