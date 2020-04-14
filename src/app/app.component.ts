@@ -13,6 +13,7 @@ export class AppComponent {
   },4500);
   });
   idioma:string='en';
+  video:string='https://www.youtube-nocookie.com/embed/uyLWkONGCnc?start=4';
   fecha:Date = new Date();
   nombre: string = 'Doroteo Arango';
   nombreDos: string = 'BenITo CaMEla';
