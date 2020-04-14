@@ -15,6 +15,8 @@ export class AppComponent {
   idioma:string='en';
   video:string='https://www.youtube-nocookie.com/embed/uyLWkONGCnc?start=4';
   fecha:Date = new Date();
+  pass:boolean=true;
+  aux:boolean;
   nombre: string = 'Doroteo Arango';
   nombreDos: string = 'BenITo CaMEla';
   arreglo = [1,2,3,4,5,6,7,8,9,10];
@@ -29,5 +31,5 @@ export class AppComponent {
       calle:'isla cancun',
       numero: 24
     }
-  }  
+  } 
 }

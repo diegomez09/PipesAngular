@@ -106,6 +106,15 @@
           </td>          
           <td>{{ fecha | date:'MMMM-dd':'':idioma}}</td>
         </tr> 
+        <tr>
+          <td>{{nombre}}</td>
+          <td>Password
+            <br>
+            <button (click)="aux = true" class="btn btn-primary">Activar</button>
+            <button (click)="aux = false" class="btn btn-secondary">Desactivar</button>
+          </td>
+          <td>{{ nombre | pass:aux}}</td>
+        </tr>
       </tbody>
     </table>
   </div>
